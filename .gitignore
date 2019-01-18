@@ -3,3 +3,14 @@ lotto_env/
 
 # pycharm
 .idea/
+
+# pycache
+__pycache__/
+
+# work in progress
+gui.py
+
+# pyinstaller
+dist/
+build/
+play.spec
