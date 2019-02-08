@@ -1,6 +1,6 @@
 from random import sample
 
-class EuroJackpot(Lottery):
+class EuroJackpot():
     """Class that models an EuroJackpot lotto game."""
 
     @staticmethod
@@ -35,3 +35,15 @@ class MiniLotto():
         numbers_list = sample(range(1, 43), 5)
         numbers_list.sort()
         print('5 out of 42:', (', ').join(str(x) for x in numbers_list))
+
+def play_again(game):
+    """Get new sets of numbers as long as the user wants it"""
+    while True:
+
+        print("Would you like to get another set of numbers(Y/N)?")
+        play_again = input(">>> ")
+
+        if play_again == 'Y':
+            game.get_numbers()
+        else:
+            exit()
